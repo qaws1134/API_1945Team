@@ -1,0 +1,6 @@
+﻿  Player_Bullet.cpp
+c:\users\홍명진\documents\visual studio 2015\projects\teamproject\teamproject\player_bullet.cpp(74): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\홍명진\documents\visual studio 2015\projects\teamproject\teamproject\player_bullet.cpp(76): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\홍명진\documents\visual studio 2015\projects\teamproject\teamproject\player_bullet.cpp(77): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TeamProject.vcxproj -> c:\users\홍명진\documents\visual studio 2015\Projects\TeamProject\Debug\TeamProject.exe
+  TeamProject.vcxproj -> c:\users\홍명진\documents\visual studio 2015\Projects\TeamProject\Debug\TeamProject.pdb (Full PDB)
