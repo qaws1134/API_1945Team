@@ -1,11 +1,11 @@
 #pragma once
 #include "Bullet.h"
-class Monster_Bullet :
+class CMonster_Bullet :
 	public CBullet
 {
 public:
-	Monster_Bullet();
-	virtual ~Monster_Bullet();
+	CMonster_Bullet();
+	virtual ~CMonster_Bullet();
 
 public:
 	virtual void Initialize() override;

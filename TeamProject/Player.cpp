@@ -29,8 +29,7 @@ void CPlayer::Initialize()
 
 }
 
-int CPlayer::Update()
-{
+int CPlayer::Update(){
 	if (m_bDead)
 		return OBJ_DEAD;
 

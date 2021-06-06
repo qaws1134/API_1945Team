@@ -12,6 +12,7 @@ CSceneMgr::CSceneMgr()
 
 CSceneMgr::~CSceneMgr()
 {
+	Release();
 }
 
 void CSceneMgr::Update()

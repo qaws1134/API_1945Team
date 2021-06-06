@@ -156,17 +156,18 @@
     <ClInclude Include="Define.h" />
     <ClInclude Include="Enum.h" />
     <ClInclude Include="Extern.h" />
+    <ClInclude Include="FlyWing.h" />
     <ClInclude Include="Functor.h" />
+    <ClInclude Include="Function.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="KeyMgr.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Monster_Bullet.h" />
     <ClInclude Include="MyBitMap.h" />
+    <ClInclude Include="M_Normal.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="ObjMgr.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Player_Bullet.h" />
     <ClInclude Include="Power_Plane.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Rush_Plane.h" />
@@ -176,6 +177,7 @@
     <ClInclude Include="Stage.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Struct.h" />
+    <ClInclude Include="Tank.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TeamProject.h" />
   </ItemGroup>
@@ -183,15 +185,15 @@
     <ClCompile Include="BmpMgr.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CollisionMgr.cpp" />
+    <ClCompile Include="FlyWing.cpp" />
     <ClCompile Include="KeyMgr.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Monster_Bullet.cpp" />
     <ClCompile Include="MyBitMap.cpp" />
+    <ClCompile Include="M_Normal.cpp" />
     <ClCompile Include="Obj.cpp" />
     <ClCompile Include="ObjMgr.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Player_Bullet.cpp" />
     <ClCompile Include="Power_Plane.cpp" />
     <ClCompile Include="Rush_Plane.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -204,6 +206,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Tank.cpp" />
     <ClCompile Include="TeamProject.cpp" />
   </ItemGroup>
   <ItemGroup>
