@@ -49,9 +49,6 @@
     <Filter Include="소스 파일\98.Manager\02.ScrollMgr">
       <UniqueIdentifier>{8cbd496c-1db7-40f1-8ac1-2277566fbd63}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\01.Obj\00.Player">
-      <UniqueIdentifier>{2a7684b3-8c70-413d-af9e-e7b7d22e08fe}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\01.Obj\01.Monster">
       <UniqueIdentifier>{b39d7cf5-15b5-42bc-b458-f9d68dccd842}</UniqueIdentifier>
     </Filter>
@@ -60,9 +57,6 @@
     </Filter>
     <Filter Include="소스 파일\01.Obj\02.Bullet">
       <UniqueIdentifier>{27fa921c-b36c-4497-9f0a-af8214a28e59}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\01.Obj\02.Bullet\00.Player_Bullet">
-      <UniqueIdentifier>{992fff82-f257-4a08-8e3d-2f212280a06e}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\01.Obj\02.Bullet\01.Monster_Bullet">
       <UniqueIdentifier>{fae9646d-28e8-49fd-ba70-dbd8bfe01a6b}</UniqueIdentifier>
@@ -81,6 +75,24 @@
     </Filter>
     <Filter Include="소스 파일\01.Obj\01.Monster\01.RushPlane">
       <UniqueIdentifier>{7ece8582-6fc8-44e6-98d8-fe05e4284485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\02.Bullet\01.Monster_Bullet\00.M_Nomal">
+      <UniqueIdentifier>{889d44b7-2f7c-477b-a8f8-daf5175bb3fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\01.Monster\02.Tank">
+      <UniqueIdentifier>{138c34e2-9684-43c7-82dc-f92ad9515dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\01.Monster\03.FlyWing">
+      <UniqueIdentifier>{d97536ef-ddec-4684-9bf2-afd2c6f9b1b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\00.Player">
+      <UniqueIdentifier>{678b980c-b666-421b-ae62-3998ff4ad15a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\02.Bullet\00.Player_Bullet">
+      <UniqueIdentifier>{995b1b6b-4922-4b1a-b8dc-5427088afb79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\03.Super_Fly">
+      <UniqueIdentifier>{3a74872d-c2b7-44a9-b47c-54eb210a09bf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -114,9 +126,6 @@
     <ClInclude Include="Monster.h">
       <Filter>소스 파일\01.Obj\01.Monster</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>소스 파일\01.Obj\00.Player</Filter>
-    </ClInclude>
     <ClInclude Include="Obj.h">
       <Filter>소스 파일\01.Obj</Filter>
     </ClInclude>
@@ -140,9 +149,6 @@
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>소스 파일\02.Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Player_Bullet.h">
-      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
     </ClInclude>
     <ClInclude Include="Monster_Bullet.h">
       <Filter>소스 파일\01.Obj\02.Bullet\01.Monster_Bullet</Filter>
@@ -171,6 +177,33 @@
     <ClInclude Include="Rush_Plane.h">
       <Filter>소스 파일\01.Obj\01.Monster\01.RushPlane</Filter>
     </ClInclude>
+    <ClInclude Include="M_Normal.h">
+      <Filter>소스 파일\01.Obj\02.Bullet\01.Monster_Bullet\00.M_Nomal</Filter>
+    </ClInclude>
+    <ClInclude Include="Function.h">
+      <Filter>헤더 파일\00.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Tank.h">
+      <Filter>소스 파일\01.Obj\01.Monster\02.Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="FlyWing.h">
+      <Filter>소스 파일\01.Obj\01.Monster\03.FlyWing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Player.h">
+      <Filter>소스 파일\01.Obj\00.Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.h">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Super_Bullet.h">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TeamProject (2)\TeamProject\SuperFly.h">
+      <Filter>소스 파일\01.Obj\03.Super_Fly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Basic_Bullet.h">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TeamProject.cpp">
@@ -181,9 +214,6 @@
     </ClCompile>
     <ClCompile Include="Monster.cpp">
       <Filter>소스 파일\01.Obj\01.Monster</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>소스 파일\01.Obj\00.Player</Filter>
     </ClCompile>
     <ClCompile Include="MainGame.cpp">
       <Filter>소스 파일\00.MainGame</Filter>
@@ -209,9 +239,6 @@
     <ClCompile Include="Scene.cpp">
       <Filter>소스 파일\02.Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Player_Bullet.cpp">
-      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
-    </ClCompile>
     <ClCompile Include="Monster_Bullet.cpp">
       <Filter>소스 파일\01.Obj\02.Bullet\01.Monster_Bullet</Filter>
     </ClCompile>
@@ -232,6 +259,30 @@
     </ClCompile>
     <ClCompile Include="Rush_Plane.cpp">
       <Filter>소스 파일\01.Obj\01.Monster\01.RushPlane</Filter>
+    </ClCompile>
+    <ClCompile Include="M_Normal.cpp">
+      <Filter>소스 파일\01.Obj\02.Bullet\01.Monster_Bullet\00.M_Nomal</Filter>
+    </ClCompile>
+    <ClCompile Include="Tank.cpp">
+      <Filter>소스 파일\01.Obj\01.Monster\02.Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="FlyWing.cpp">
+      <Filter>소스 파일\01.Obj\01.Monster\03.FlyWing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player.cpp">
+      <Filter>소스 파일\01.Obj\00.Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.cpp">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Super_Bullet.cpp">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TeamProject (2)\TeamProject\SuperFly.cpp">
+      <Filter>소스 파일\01.Obj\03.Super_Fly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Basic_Bullet.cpp">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

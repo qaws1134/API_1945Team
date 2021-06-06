@@ -4,6 +4,7 @@
 #include "SceneMgr.h"
 #include "ObjMgr.h"
 #include "BmpMgr.h"
+#include "KeyMgr.h"
 CMainGame::CMainGame()
 	: m_iFPS(0), m_dwFPSTime(GetTickCount())
 {
@@ -65,8 +66,10 @@ void CMainGame::Render()
 void CMainGame::Release()
 {
 	CScrollMgr::Destroy_Instance();
+	CBmpMgr::Destroy_Instance();
 	CSceneMgr::Destroy_Instance();
 	CObjMgr::Destroy_Instance();
+	CKeyMgr::Destroy_Instance();
 
 	ReleaseDC(g_hWnd, m_hDC);
 }

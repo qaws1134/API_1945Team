@@ -8,4 +8,7 @@
 #include "Enum.h"
 #include "CAbstractFactory.h"
 #include "Functor.h"
+#include "Function.h"
+
+
 #endif

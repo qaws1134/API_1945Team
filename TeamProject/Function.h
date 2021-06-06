@@ -13,4 +13,12 @@ void Safe_Delete(T& _Dst)
 	}
 }
 
+
+
+template <typename T>
+bool CompareY(T& _Dst, T& _Src)
+{
+	return _Dst->Get_Info().vPos.y < _Src->Get_Info().vPos.y;
+}
+
 #endif // !__FUNCTION_H__

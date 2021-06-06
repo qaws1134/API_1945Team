@@ -55,6 +55,9 @@ void CObjMgr::Render(HDC _DC)
 {
 	for (int i = 0; i < RENDERID::END; ++i)
 	{
+		if (RENDERID::OBJECT == i)
+			m_listRender[i].sort(CompareY<CObj*>);
+
 		for (auto& pObj : m_listRender[i])
 			pObj->Render(_DC);
 
@@ -64,8 +67,15 @@ void CObjMgr::Render(HDC _DC)
 
 void CObjMgr::Release()
 {
+	for (int i = 0; i < OBJID::END; i++)
+	{
+		for_each(m_listObj[i].begin(), m_listObj[i].end(), Safe_Delete<CObj*>);
+		m_listObj[i].clear();
+	}
 }
 
 void CObjMgr::Delete_ObjID(OBJID::ID _eID)
 {
+	for_each(m_listObj[_eID].begin(), m_listObj[_eID].end(), Safe_Delete<CObj*>);
+	m_listObj[_eID].clear();
 }

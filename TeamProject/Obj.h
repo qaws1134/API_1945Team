@@ -1,4 +1,5 @@
 #pragma once
+
 class CObj
 {
 public:
@@ -14,20 +15,17 @@ public:
 
 public:
 	void Set_Dead() { m_bDead = true; }
-
+	void Set_Info(INFO _tInfo) { m_tInfo = _tInfo; }
+	void Set_Dir(D3DXVECTOR3 _vDir) { m_tInfo.vDir = _vDir; }
+	void Set_Pos(float _x, float _y) { m_tInfo.vPos.x = _x; m_tInfo.vPos.y = _y; }
+public :
+	INFO Get_Info() { return m_tInfo; }
 public:
 	const RENDERID::ID& Get_RenderID() const { return m_eRenderID; }
-
-public:
-	void Set_Pos(float _x, float _y) { m_tInfo.fX = _x; m_tInfo.fY = _y; }
-	void Set_Angle(float _fAngle) { m_fAngle = _fAngle; }
-protected:
-	void Update_Rect();
-
 protected:
 	INFO	m_tInfo;
 	RECT	m_tRect;
-
+	
 	bool	m_bDead;
 	float	m_fSpeed;
 	float	m_fAngle;
