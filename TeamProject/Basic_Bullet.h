@@ -23,6 +23,8 @@ public:
 		void Set_BulletType(BULLET_STATE _BULLET);
 	public:
 		void Set_Move(bool	Move) { m_Move = Move;}
+	public:
+		void Correct_Rect();
 	private:
 		BULLET_STATE	m_eBulletType;
 		bool			m_Move;

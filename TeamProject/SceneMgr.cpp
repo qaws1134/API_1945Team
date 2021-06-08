@@ -2,7 +2,7 @@
 #include "Scene.h"
 #include "SceneMgr.h"
 #include "Stage.h"
-
+#include "Logo.h"
 CSceneMgr* CSceneMgr::m_pInstance = nullptr;
 CSceneMgr::CSceneMgr()
 	: m_pScene(nullptr), m_ePreScene(SCENEID::END), m_eCurScene(CSceneMgr::END)
@@ -45,6 +45,9 @@ void CSceneMgr::Scene_Change(SCENEID _eID)
 
 		switch (m_eCurScene)
 		{
+		case CSceneMgr::LOGO:
+			m_pScene = new CLogo;
+			break;
 		case CSceneMgr::STAGE:
 			m_pScene = new CStage;
 			break;

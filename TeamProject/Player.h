@@ -3,6 +3,7 @@
 #define Charge_Bullet_LaunchN 4
 #define Max_Player_Angle 60
 #define Min_Player_Angle -60
+#define Charge_Gauge_Max 200
 #include "Obj.h"
 #include "Basic_Bullet.h"
 #include "Bullet.h"
@@ -10,7 +11,7 @@ class CPlayer :
 	public CObj
 {
 public:
-	enum BULLET_LEVEL { LEVEL1, LEVEL2, LEVEL3, LEVEL4, LEVEL5, LEVEL6, LEVEL7, CHARGE, BOMB,END };
+	enum BULLET_LEVEL { LEVEL1, LEVEL2, LEVEL3, LEVEL4, LEVEL5, LEVEL6, CHARGE, BOMB, END };
 public:
 	CPlayer();
 	virtual ~CPlayer();
@@ -21,6 +22,10 @@ public:
 	virtual void Late_Update() override;
 	virtual void Render(HDC _DC) override;
 	virtual void Release() override;
+	virtual void Update_Rect() override;
+public:
+	void Add_Level();
+	void Add_Bomb();
 
 private:
 	void Key_Check();
@@ -43,10 +48,12 @@ private:
 		CObj* pObj = new T;
 		((Basic_Bullet*)(pObj))->Set_Size(_xSize, _ySize);
 		((Basic_Bullet*)(pObj))->Set_BulletType(_STATE);
-		pObj->Initialize();
 		((Basic_Bullet*)(pObj))->Set_Pos(_x, _y);
+		pObj->Initialize();
 		return pObj;
 	}
+
+
 private:
 	float			m_fPosinAngle;
 
@@ -54,7 +61,8 @@ private:
 	DWORD			m_delay;
 
 	BULLET_LEVEL			m_eBullet_Type;
-
+	BULLET_LEVEL			m_eBeforeBullet_Type;
+	int				m_iBulletLevel;
 	int				m_Bullet_State;
 	bool			m_bBullet_Launch;
 	int				m_Bullet_LaunchN;
@@ -64,5 +72,10 @@ private:
 
 	CObj*			m_Charge_Shot;
 	CObj*			m_Bomb;
+
+	int				m_iBombN;
+	int				m_Charge_Gauge;
+
+	bool			m_bFullGauge;
 };
 

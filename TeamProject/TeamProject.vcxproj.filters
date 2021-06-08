@@ -94,6 +94,18 @@
     <Filter Include="소스 파일\01.Obj\03.Super_Fly">
       <UniqueIdentifier>{3a74872d-c2b7-44a9-b47c-54eb210a09bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\02.Scene\00.Logo">
+      <UniqueIdentifier>{77a7a9e6-ca7f-4940-b4dc-f492f00f4162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\04.Button">
+      <UniqueIdentifier>{97ae21a6-1c1a-4de0-b55c-9517ecb789aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\02.Bullet\00.Player_Bullet\00.Basic_Bullet">
+      <UniqueIdentifier>{ff009c0d-16f3-4907-a459-6e2ad3bbb8dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\02.Bullet\00.Player_Bullet\01.Super_Bullet">
+      <UniqueIdentifier>{349fe74a-3d44-4439-8881-b04a5e57c780}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -189,19 +201,25 @@
     <ClInclude Include="FlyWing.h">
       <Filter>소스 파일\01.Obj\01.Monster\03.FlyWing</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Player.h">
+    <ClInclude Include="Player.h">
       <Filter>소스 파일\01.Obj\00.Player</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.h">
-      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Super_Bullet.h">
-      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\SuperFly.h">
+    <ClInclude Include="SuperFly.h">
       <Filter>소스 파일\01.Obj\03.Super_Fly</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Basic_Bullet.h">
+    <ClInclude Include="Logo.h">
+      <Filter>소스 파일\02.Scene\00.Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="MyButton.h">
+      <Filter>소스 파일\01.Obj\04.Button</Filter>
+    </ClInclude>
+    <ClInclude Include="Basic_Bullet.h">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet\00.Basic_Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Super_Bullet.h">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet\01.Super_Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_Bullet.h">
       <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
     </ClInclude>
   </ItemGroup>
@@ -269,19 +287,25 @@
     <ClCompile Include="FlyWing.cpp">
       <Filter>소스 파일\01.Obj\01.Monster\03.FlyWing</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player.cpp">
+    <ClCompile Include="Player.cpp">
       <Filter>소스 파일\01.Obj\00.Player</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.cpp">
-      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Super_Bullet.cpp">
-      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\SuperFly.cpp">
+    <ClCompile Include="SuperFly.cpp">
       <Filter>소스 파일\01.Obj\03.Super_Fly</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Basic_Bullet.cpp">
+    <ClCompile Include="Logo.cpp">
+      <Filter>소스 파일\02.Scene\00.Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="MyButton.cpp">
+      <Filter>소스 파일\01.Obj\04.Button</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic_Bullet.cpp">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet\00.Basic_Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Super_Bullet.cpp">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet\01.Super_Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.cpp">
       <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
     </ClCompile>
   </ItemGroup>

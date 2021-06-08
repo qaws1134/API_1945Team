@@ -149,11 +149,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Basic_Bullet.h" />
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Player.h" />
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.h" />
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\SuperFly.h" />
-    <ClInclude Include="..\..\TeamProject (2)\TeamProject\Super_Bullet.h" />
+    <ClInclude Include="Basic_Bullet.h" />
+    <ClInclude Include="Logo.h" />
+    <ClInclude Include="MyButton.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Player_Bullet.h" />
+    <ClInclude Include="SuperFly.h" />
+    <ClInclude Include="Super_Bullet.h" />
     <ClInclude Include="BmpMgr.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="CAbstractFactory.h" />
@@ -187,11 +189,13 @@
     <ClInclude Include="TeamProject.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Basic_Bullet.cpp" />
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player.cpp" />
+    <ClCompile Include="Basic_Bullet.cpp" />
+    <ClCompile Include="Logo.cpp" />
+    <ClCompile Include="MyButton.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.cpp" />
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\SuperFly.cpp" />
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Super_Bullet.cpp" />
+    <ClCompile Include="SuperFly.cpp" />
+    <ClCompile Include="Super_Bullet.cpp" />
     <ClCompile Include="BmpMgr.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CollisionMgr.cpp" />

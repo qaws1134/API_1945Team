@@ -20,6 +20,7 @@ public:
 	void Set_Pos(float _x, float _y) { m_tInfo.vPos.x = _x; m_tInfo.vPos.y = _y; }
 public :
 	INFO Get_Info() { return m_tInfo; }
+	virtual void Update_Rect();
 public:
 	const RENDERID::ID& Get_RenderID() const { return m_eRenderID; }
 protected:

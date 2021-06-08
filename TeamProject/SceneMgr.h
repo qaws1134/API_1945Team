@@ -7,7 +7,7 @@ class CScene;
 class CSceneMgr
 {
 public:
-	enum SCENEID { STAGE, END };
+	enum SCENEID {LOGO, STAGE, END };
 
 private:
 	CSceneMgr();

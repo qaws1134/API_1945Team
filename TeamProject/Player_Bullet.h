@@ -4,7 +4,7 @@ class Player_Bullet :
 	public CBullet
 {
 public:
-	enum BULLET_STATE { BASIC, CHARGE, BOMB, END };
+	enum BULLET_STATE { BASIC, CHARGE, BOMB, TARGET, END };
 public:
 	Player_Bullet();
 	virtual ~Player_Bullet();

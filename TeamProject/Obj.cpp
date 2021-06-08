@@ -16,4 +16,12 @@ CObj::~CObj()
 {
 }
 
+void CObj::Update_Rect()
+{
+	m_tRect.left = m_tInfo.vPos.x - m_tInfo.vSize.x * 0.2f;
+	m_tRect.right = m_tInfo.vPos.x + m_tInfo.vSize.x * 0.2f;
+	m_tRect.top = m_tInfo.vPos.y - m_tInfo.vSize.y * 0.2f;
+	m_tRect.bottom = m_tInfo.vPos.y + m_tInfo.vSize.y * 0.2f;
+}
+
 

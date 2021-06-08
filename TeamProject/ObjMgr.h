@@ -17,6 +17,8 @@ public:
 	void Add_Object(CObj* _pObj, OBJID::ID _eID) { m_listObj[_eID].emplace_back(_pObj); }
 
 public:
+	CObj* CObjMgr::Get_ShortTarget(INFO _INFO, OBJID::ID _eID);
+public:
 	CObj* Get_Player() { if (m_listObj[OBJID::PLAYER].empty())return nullptr; return m_listObj[OBJID::PLAYER].front(); }
 public:
 	void Delete_ObjID(OBJID::ID _eID);

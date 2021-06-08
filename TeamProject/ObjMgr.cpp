@@ -74,6 +74,31 @@ void CObjMgr::Release()
 	}
 }
 
+CObj * CObjMgr::Get_ShortTarget(INFO _INFO, OBJID::ID _eID)
+{
+	CObj*	pTarget = nullptr;
+	float	fDis = 0.f;
+
+	float	fX = 0.f;
+	float	fY = 0.f;
+	float	fDia = 0.f;
+
+	for (auto& pDst : m_listObj[_eID])
+	{
+		fX = _INFO.vPos.x - pDst->Get_Info().vPos.x;
+		fY = _INFO.vPos.y - pDst->Get_Info().vPos.y;
+		fDia = sqrtf(fX * fX + fY * fY);
+
+		if (fDis > fDia || !pTarget)
+		{
+			pTarget = pDst;
+			fDis = fDia;
+		}
+	}
+
+	return pTarget;
+}
+
 void CObjMgr::Delete_ObjID(OBJID::ID _eID)
 {
 	for_each(m_listObj[_eID].begin(), m_listObj[_eID].end(), Safe_Delete<CObj*>);
