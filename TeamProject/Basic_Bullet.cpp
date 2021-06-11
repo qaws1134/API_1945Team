@@ -113,9 +113,9 @@ void Basic_Bullet::Set_Size(float _xSize, float _ySize)
 	m_tInfo.vSize.y = _ySize;
 }
 
-void Basic_Bullet::Set_BulletType(BULLET_STATE _BULLET)
+void Basic_Bullet::Set_BulletType(Player_Bullet::BULLET_STATE _BulletState)
 {
-	m_eBulletType = _BULLET;
+	m_eBulletType = _BulletState;
 }
 
 void Basic_Bullet::Correct_Rect()
@@ -133,4 +133,9 @@ void Basic_Bullet::Correct_Rect()
 	}
 }
 
+
+Player_Bullet::BULLET_STATE Basic_Bullet::Get_BulletState()
+{
+	return m_eBulletType;
+}
 

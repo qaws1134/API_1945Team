@@ -151,12 +151,19 @@
   <ItemGroup>
     <ClInclude Include="BackGround.h" />
     <ClInclude Include="Basic_Bullet.h" />
+    <ClInclude Include="Boom.h" />
+    <ClInclude Include="BreakBullet.h" />
     <ClInclude Include="Effect.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Logo.h" />
     <ClInclude Include="MyButton.h" />
     <ClInclude Include="MyUI.h" />
+    <ClInclude Include="PinPanel.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Player_Bullet.h" />
+    <ClInclude Include="PosinCannon.h" />
+    <ClInclude Include="Power.h" />
+    <ClInclude Include="Robot.h" />
     <ClInclude Include="SuperFly.h" />
     <ClInclude Include="Super_Bullet.h" />
     <ClInclude Include="BmpMgr.h" />
@@ -190,16 +197,25 @@
     <ClInclude Include="Tank.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TeamProject.h" />
+    <ClInclude Include="TowerCannon.h" />
+    <ClInclude Include="TrainBoss.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BackGround.cpp" />
     <ClCompile Include="Basic_Bullet.cpp" />
+    <ClCompile Include="Boom.cpp" />
+    <ClCompile Include="BreakBullet.cpp" />
     <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Logo.cpp" />
     <ClCompile Include="MyButton.cpp" />
     <ClCompile Include="MyUI.cpp" />
+    <ClCompile Include="PinPanel.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.cpp" />
+    <ClCompile Include="Player_Bullet.cpp" />
+    <ClCompile Include="PosinCannon.cpp" />
+    <ClCompile Include="Power.cpp" />
+    <ClCompile Include="Robot.cpp" />
     <ClCompile Include="SuperFly.cpp" />
     <ClCompile Include="Super_Bullet.cpp" />
     <ClCompile Include="BmpMgr.cpp" />
@@ -228,6 +244,8 @@
     </ClCompile>
     <ClCompile Include="Tank.cpp" />
     <ClCompile Include="TeamProject.cpp" />
+    <ClCompile Include="TowerCannon.cpp" />
+    <ClCompile Include="TrainBoss.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TeamProject.rc" />

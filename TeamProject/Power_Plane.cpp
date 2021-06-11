@@ -2,6 +2,7 @@
 #include "Power_Plane.h"
 #include "ObjMgr.h"
 #include "M_Normal.h"
+#include "Power.h"
 CPower_Plane::CPower_Plane() : m_bTurn(false)
 {
 }
@@ -14,13 +15,13 @@ CPower_Plane::~CPower_Plane()
 
 void CPower_Plane::Initialize()
 {
-	m_iHp = 5;
+	m_iHp = 1;
 	//추가한 코드(위)
 
 	m_eRenderID = RENDERID::OBJECT;
 	D3DXMatrixIdentity(&matWorld);
 
-	m_iExitLate = 1000;
+	m_iExitLate = 700;
 	m_tInfo.vSize = { 100.f,100.f,0.f };
 
 	m_vP[0] = { -m_tInfo.vSize.x * 0.2f,  -m_tInfo.vSize.y * 0.3f , 0.f };
@@ -28,7 +29,7 @@ void CPower_Plane::Initialize()
 	m_vP[2] = { m_tInfo.vSize.x * 0.1f, m_tInfo.vSize.y * 0.3f , 0.f };
 	m_vP[3] = { -m_tInfo.vSize.x * 0.1f,m_tInfo.vSize.y * 0.3f , 0.f };
 
-	m_fSpeed = 5.f;
+	m_fSpeed = 3.f;
 }
 
 void CPower_Plane::Ai_Pattern()
@@ -52,7 +53,7 @@ void CPower_Plane::Ai_Pattern()
 			m_bWalk_Out = true;
 			if (!m_bTurn)
 			{
-				CObjMgr::Get_Instance()->Add_Object(CreateBullet<CM_Normal>(), OBJID::BULLET);
+				CObjMgr::Get_Instance()->Add_Object(CreateBullet<CM_Normal>(), OBJID::M_BULLET);
 				m_bTurn = true;
 			}
 		}
@@ -93,4 +94,10 @@ void CPower_Plane::Dir_Plane(bool m_bTurn)
 
 	D3DXVec3Normalize(&m_tInfo.vDir, &m_tInfo.vDir);
 	m_tInfo.vPos += m_tInfo.vDir*m_fSpeed;
+}
+
+void CPower_Plane::Release()
+{
+	if (m_bItemDrop)
+		CObjMgr::Get_Instance()->Add_Object(CAbstractFactory<CPower>::Create(m_tInfo.vPos), OBJID::ITEM);
 }

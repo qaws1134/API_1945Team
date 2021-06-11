@@ -32,6 +32,7 @@ private:
 	bool			m_Move;
 	int				m_Still;
 	INFO		TestInfo;
+	bool m_bMove;
 
 };
 

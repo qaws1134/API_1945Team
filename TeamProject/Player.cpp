@@ -12,7 +12,7 @@ CPlayer::CPlayer()
 	m_iBulletLevel(0), m_iBombN(0), m_eBeforeBullet_Type(BULLET_LEVEL::END),
 	m_Charge_Gauge(0), m_iChargeShot(0), m_iScore(0), m_iSuperShot(0),
 	m_iSuperShot_Gauge(0), m_bDead_Effect_Sequence(false), m_bDead_Effect_Move(false), Dead_Montion_Num(0),
-	m_bDeadMove(false), m_bKeyRock(false), m_bBlink(false),
+	m_bDeadMove(false), m_bBlink(false),
 	m_iDelay(50)
 
 {
@@ -53,7 +53,7 @@ void CPlayer::Initialize()
 	D3DXMatrixIdentity(&matWorld);
 
 	m_tInfo.vPos = { 550.0f, 650.0f, 0.0f };
-	m_tInfo.vSize = { 30.0f, 60.0f, 0.0f };
+	m_tInfo.vSize = { 20.0f, 40.0f, 0.0f };
 	m_tInfo.vDir = { 0.0f, 0.0f, 0.0f };
 	m_tInfo.vDir = { 0.0f, 0.0f, 0.0f };
 
@@ -67,7 +67,7 @@ void CPlayer::Initialize()
 
 	m_tRect.top = (LONG)(m_tInfo.vPos.y - m_tInfo.vSize.y * 0.5f);
 	m_tRect.bottom = (LONG)(m_tInfo.vPos.y + m_tInfo.vSize.y * 0.5f);
-	m_fSpeed = 10.f;
+	m_fSpeed = 5.f;
 
 	m_eBullet_Type = LEVEL1;
 	m_eBeforeBullet_Type = m_eBullet_Type;
@@ -146,7 +146,7 @@ void CPlayer::Update_Rect()
 
 void CPlayer::Add_Level()
 {
-	if (LEVEL6 >= m_iBulletLevel)
+	if (LEVEL5 >= m_iBulletLevel)
 	{
 		m_iBulletLevel++;
 		m_eBullet_Type = (BULLET_LEVEL)m_iBulletLevel;
@@ -219,8 +219,6 @@ void CPlayer::Set_Score(int n)
 
 void CPlayer::Key_Check()
 {
-	if (!m_bKeyRock)
-	{
 
 
 
@@ -230,7 +228,7 @@ void CPlayer::Key_Check()
 			CObj* pObj = new CSuperFly;
 			pObj->Set_Pos(m_tInfo.vPos.x, WINCY);
 			pObj->Initialize();
-			CObjMgr::Get_Instance()->Add_Object(pObj, OBJID::BULLET);
+			CObjMgr::Get_Instance()->Add_Object(pObj, OBJID::SHIELD);
 		}
 		else if (CKeyMgr::Get_Instance()->Key_Pressing('X'))
 		{
@@ -346,8 +344,7 @@ void CPlayer::Key_Check()
 			m_fAngle = 0.0;
 		}
 		m_tInfo.vDir = { 0.0, 0.0, 0.0 };
-	}
-
+	
 }
 
 void CPlayer::State_Change()
@@ -664,7 +661,7 @@ void CPlayer::Replay()
 
 	if (m_tInfo.vPos.y < 500)
 	{
-		m_bKeyRock = false;
+
 		m_bDeadMove = false;
 		m_bBlink = false;
 	}
@@ -678,7 +675,6 @@ void CPlayer::Check_Hp()
 	}
 	if (m_bDeadMove)
 	{
-		m_bKeyRock = true;
 		Replay();
 	}
 }
@@ -703,14 +699,13 @@ void CPlayer::Draw_Rect(HDC _DC)
 	DeleteObject(Brush);
 
 }
-
 void CPlayer::Dead_Player()
 {
 	if (m_bDead_Effect_Move)
 	{
 		if (Dead_EffectSize <= 0)
 			m_bDead_Effect_Sequence = false;
-		if (Dead_EffectSize[4] > 210)
+		if (Dead_EffectSize[4] > 210 || Dead_EffectSize[0] < -200)
 		{
 			m_bDead_Effect_Sequence = true;
 			m_bDead_Effect_Move = false;
@@ -736,10 +731,9 @@ void CPlayer::Dead_Player()
 			Dead_Effect[i].bottom = (LONG)(m_tInfo.vPos.y + Dead_EffectSize[i] * 0.5);
 		}
 	}
+	else
+		ZeroMemory(Dead_EffectSize, sizeof(Dead_EffectSize));
 }
-
-
-
 
 void CPlayer::Set_Player()
 {

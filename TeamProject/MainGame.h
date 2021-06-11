@@ -18,6 +18,8 @@ private:
 
 	int			m_iFPS;
 	DWORD		m_dwFPSTime;
+	DWORD		m_dwStageTime;
+
 
 };
 

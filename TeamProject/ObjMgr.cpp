@@ -101,16 +101,18 @@ CObj * CObjMgr::Get_ShortTarget(INFO _INFO, OBJID::ID _eID)
 	return pTarget;
 }
 
+
 void CObjMgr::Collision_Update()
 {
 	if (!((CPlayer*)(Get_Player()))->Get_DeadMove() && CCollisionMgr::Collision_Rect(m_listObj[OBJID::PLAYER], m_listObj[OBJID::M_BULLET], false)) {}
 
-	if (CCollisionMgr::Collision_Rect(m_listObj[OBJID::MONSTER], m_listObj[OBJID::BULLET],true) )// 몬스터와 플레이어 불렛 충돌
+	if (CCollisionMgr::Collision_Rect(m_listObj[OBJID::MONSTER], m_listObj[OBJID::BULLET], true))// 몬스터와 플레이어 불렛 충돌
 	{
 		((CPlayer*)(Get_Player()))->Set_SuperShot_Gauge(50);
 		((CPlayer*)(Get_Player()))->Set_Score(rand() % 1000);
 	}
 
+	CCollisionMgr::Collision_Rect(m_listObj[OBJID::SHIELD], m_listObj[OBJID::M_BULLET], false);
 }
 
 void CObjMgr::Delete_ObjID(OBJID::ID _eID)

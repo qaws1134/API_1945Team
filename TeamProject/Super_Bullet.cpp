@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Super_Bullet.h"
 #include "ObjMgr.h"
-Super_Bullet::Super_Bullet() :m_eBulletType(BULLET_STATE::END),  m_Move(false), m_Still(0)
+Super_Bullet::Super_Bullet() :m_eBulletType(BULLET_STATE::END),  m_Move(false), m_Still(0), m_bMove(false)
 {
 }
 
@@ -42,6 +42,11 @@ void Super_Bullet::Initialize()
 			float fCos = D3DXVec3Dot(&vLook, &m_tInfo.vDir);
 			m_fAngle = acosf(fCos);
 		}
+		else
+		{
+			m_bMove = true;
+		}
+
 	}
 }
 
@@ -63,6 +68,9 @@ int Super_Bullet::Update()
 	default:
 		break;
 	}
+
+	if (m_bMove)
+		m_tInfo.vPos.y -= m_fSpeed;
 	Update_Rect();
 	return OBJ_NOEVENT;
 }

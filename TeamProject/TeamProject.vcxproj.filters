@@ -115,6 +115,21 @@
     <Filter Include="소스 파일\01.Obj\08.Effect">
       <UniqueIdentifier>{8942730d-c742-435d-af01-e0eb18f0419c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\01.Obj\01.Monster\05.Boss">
+      <UniqueIdentifier>{5b149ce4-4e14-4ece-8467-985aafc74656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\01.Monster\05.Boss\01.PinPanel">
+      <UniqueIdentifier>{04b5fe1f-88e7-4a0f-9ab1-8051e74d933c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\01.Monster\05.Boss\00.Posin">
+      <UniqueIdentifier>{a2310240-55b7-44ca-88fb-527fc796716a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\01.Monster\05.Boss\02.BreakBullet">
+      <UniqueIdentifier>{4d19dfff-ff50-4367-a8ca-d884307cc587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\01.Monster\05.Boss\03.Robot">
+      <UniqueIdentifier>{696b22fa-669f-4c97-9c14-23de10b04fc5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -240,6 +255,33 @@
     <ClInclude Include="Effect.h">
       <Filter>소스 파일\01.Obj\08.Effect</Filter>
     </ClInclude>
+    <ClInclude Include="Boom.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Power.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerCannon.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TrainBoss.h">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="PinPanel.h">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss\01.PinPanel</Filter>
+    </ClInclude>
+    <ClInclude Include="PosinCannon.h">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss\00.Posin</Filter>
+    </ClInclude>
+    <ClInclude Include="BreakBullet.h">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss\02.BreakBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss\03.Robot</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TeamProject.cpp">
@@ -320,9 +362,6 @@
     <ClCompile Include="Super_Bullet.cpp">
       <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet\01.Super_Bullet</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.cpp">
-      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
-    </ClCompile>
     <ClCompile Include="MyUI.cpp">
       <Filter>소스 파일\01.Obj\06.UI</Filter>
     </ClCompile>
@@ -334,6 +373,36 @@
     </ClCompile>
     <ClCompile Include="Effect.cpp">
       <Filter>소스 파일\01.Obj\08.Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Boom.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Power.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerCannon.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_Bullet.cpp">
+      <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="TrainBoss.cpp">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="PinPanel.cpp">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss\01.PinPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="PosinCannon.cpp">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss\00.Posin</Filter>
+    </ClCompile>
+    <ClCompile Include="BreakBullet.cpp">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss\02.BreakBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>소스 파일\01.Obj\01.Monster\05.Boss\03.Robot</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

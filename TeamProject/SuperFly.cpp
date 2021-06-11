@@ -29,7 +29,7 @@ void CSuperFly::Initialize()
 	m_vP[2] = { m_tInfo.vSize.x  * 0.5f, m_tInfo.vSize.y * 0.5f , 0.f };
 	m_vP[3] = { -m_tInfo.vSize.x * 0.5f, m_tInfo.vSize.y * 0.5f , 0.f };
 
-	m_fSpeed = 10.f;
+	m_fSpeed = 3.f;
 
 	m_Fly.vPos = { m_tInfo.vPos.x, m_tInfo.vPos.y + 10.f, 0.0f };
 	m_Fly.vSize = { 250.0f, 50.0f, 0.0f };

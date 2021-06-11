@@ -69,9 +69,9 @@ void CBackGround::Update_Road()
 
 			i_YScroll = 0;
 	}
-	i_YScroll += 10;
-	i_YMove += 10;
-	i_YMove2 += 10;
+	i_YScroll += 3;
+	i_YMove += 3;
+	i_YMove2 += 3;
 
 }
 

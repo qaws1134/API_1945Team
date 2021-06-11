@@ -29,25 +29,32 @@ public:
 	{
 		CObj* pObj = new T;
 		pObj->Set_Pos(_x, _y);
-		pObj->Initialize();
 		pObj->Set_Angle(_fAngle);
+		pObj->Initialize();
 
 		return pObj;
 	}
 	static CObj* Create(float _x, float _y, D3DXVECTOR3 _vDir)
 	{
 		CObj* pObj = new T;
-		pObj->Initialize();
 		pObj->Set_Pos(_x, _y);
 		pObj->Set_Dir(_vDir);
+		pObj->Initialize();
 		return pObj;
 	}
 	static CObj* Create(D3DXVECTOR3 _vPos, D3DXVECTOR3 _vDir)
 	{
 		CObj* pObj = new T;
+		pObj->Set_Pos(_vPos.x, _vPos.y);
 		pObj->Initialize();
 		pObj->Set_Dir(_vDir);
+		return pObj;
+	}
+	static CObj* Create(D3DXVECTOR3 _vPos)
+	{
+		CObj* pObj = new T;
 		pObj->Set_Pos(_vPos.x, _vPos.y);
+		pObj->Initialize();
 		return pObj;
 	}
 	static CObj* Create(CObj* _pTarget)
@@ -58,6 +65,7 @@ public:
 
 		return pObj;
 	}
+
 };
 
 #endif

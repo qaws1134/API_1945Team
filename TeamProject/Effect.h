@@ -16,9 +16,11 @@ public:
 
 public:
 	void Update_Effect();
-private:
-	RECT	m_tRect[3];
-	bool	m_bMove;
-	int		m_iEffect_Size;
-};
 
+public:
+	void Set_Size(int n);
+private:
+	RECT   m_tRect[3];
+	bool   m_bMove;
+	int      m_iEffect_Size;
+};

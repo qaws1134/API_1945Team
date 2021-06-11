@@ -7,6 +7,7 @@
 class CMonster abstract:
 	public CObj
 {
+protected:
 public:
 	explicit CMonster();
 	virtual ~CMonster();
@@ -16,24 +17,41 @@ public:
 	virtual int Update() override;
 	virtual void Late_Update() override;
 	virtual void Render(HDC _DC);
-	virtual void Release() override;
+	virtual void Release() PURE;
 
 public :
 	virtual void Ai_Pattern()PURE;
 	virtual void WriteMatrix(float _fRotAngle)PURE;
-	virtual void Dir_Plane (bool _bWalk_Out)PURE; //스폰 후 방향과 퇴장 시 방향
+	virtual void Dir_Plane (bool _bWalk_Out); //스폰 후 방향과 퇴장 시 방향
 	
 public :
-	void CMonster::Set_Target(CObj * _pPlayer);
+	void Set_Target();
+	void Set_eDir(M_ANGLE::DIRANGLE _eDir) { m_eDir = _eDir; }
+	void Set_eExitDir(M_ANGLE::DIRANGLE _eDir) { m_eExitDir = _eDir; }
+	void Set_Item() { m_bItemDrop = true; }
 public :
 	//직선 총알
 	template<typename T>
 	CObj* CreateBullet()
 	{
-		return CAbstractFactory<T>::Create(m_tInfo.vPos.x,m_tInfo.vPos.y+ (m_tInfo.vSize.y*0.5f), m_vDir_Bullet);
+		return CAbstractFactory<T>::Create(m_tInfo.vPos.x , m_tInfo.vPos.y, m_vDir_Bullet);
 	}
-	//목표- 나 =  방향
-	//범위,총알 갯수, 공격력 , 총알 속도
+	template<typename T>
+	CObj* CreateBullet(bool _bBullSize)
+	{
+		return CAbstractFactory<T>::Create(m_tInfo.vPos.x, m_tInfo.vPos.y, m_vDir_Bullet, _bBullSize);
+	}
+	template<typename T>
+	CObj* CreateBullet(float _fOffsetX, float _fOffsetY)
+	{
+		return CAbstractFactory<T>::Create(m_tInfo.vPos.x+ _fOffsetX, m_tInfo.vPos.y + _fOffsetY, m_vDir_Bullet);
+	}
+	template<typename T>
+	CObj* CreateBullet(float _fX, float fY, float _fAngle )
+	{
+		return CAbstractFactory<T>::Create(_fX, fY, _fAngle);
+	}
+
 	template<typename T>
 	void CreateXWayBullet(float _Angle, float _BulletNum, int _iAtt, float _fSpeed)
 	{
@@ -54,9 +72,17 @@ protected:
 	D3DXVECTOR3 m_vDir_Bullet;
 	DWORD m_dwExitTime;
 	int m_iExitLate;
-
+	
+	float m_fTurnAngle;
 	DWORD m_dwAttTime;
 	int m_iAttLate;
+	
+	D3DXVECTOR3 m_vPMonster[20];
+	D3DXVECTOR3 m_vQMonster[20];
+
+
+	M_ANGLE::DIRANGLE m_eDir;
+	M_ANGLE::DIRANGLE m_eExitDir;
 
 };
 

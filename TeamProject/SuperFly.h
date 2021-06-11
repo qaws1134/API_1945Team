@@ -36,9 +36,8 @@ private:
 	}
 
 private:
-	DWORD			m_Time;
-	DWORD			m_delay;
+	DWORD         m_Time;
+	DWORD         m_delay;
 
-	INFO			m_Fly;
+	INFO         m_Fly;
 };
-

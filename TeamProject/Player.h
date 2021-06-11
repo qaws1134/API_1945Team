@@ -35,6 +35,7 @@ public:
 	int Get_Super_Shot();
 	int Get_Charge_Shot();
 	int Get_Charge_Shot_Gauge();
+	int Get_Level() { return m_iBulletLevel; }
 public:
 	void Super_Shot_Check();
 public:
@@ -124,8 +125,6 @@ private:
 	bool			m_bDead_Effect_Move;
 	bool			m_bDeadMove;
 	int				Dead_Montion_Num;
-
-	bool			m_bKeyRock;
 
 	bool			m_bBlink;
 

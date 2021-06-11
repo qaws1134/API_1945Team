@@ -5,8 +5,9 @@
 #include "ObjMgr.h"
 #include "BmpMgr.h"
 #include "KeyMgr.h"
+int g_iStageFrame = 0;
 CMainGame::CMainGame()
-	: m_iFPS(0), m_dwFPSTime(GetTickCount())
+	: m_iFPS(0), m_dwFPSTime(GetTickCount()), m_dwStageTime(GetTickCount())
 {
 }
 
@@ -49,7 +50,6 @@ void CMainGame::Render()
 
 
 
-	
 	++m_iFPS;
 	if (m_dwFPSTime + 1000 < GetTickCount())
 	{
@@ -60,6 +60,12 @@ void CMainGame::Render()
 		m_iFPS = 0;
 		m_dwFPSTime = GetTickCount();
 	}
+	if (m_dwStageTime + 500 < GetTickCount())
+	{
+		g_iStageFrame++;
+		m_dwStageTime = GetTickCount();
+	}
+
 }
 
 void CMainGame::Release()

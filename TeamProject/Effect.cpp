@@ -20,7 +20,10 @@ void CEffect::Initialize()
 	m_iEffect_Size = 10 + rand() % 15;
 
 }
-
+void CEffect::Set_Size(int n)
+{
+	m_iEffect_Size = n;
+}
 int CEffect::Update()
 {
 	if (m_bDead)
