@@ -18,9 +18,15 @@ public:
 	void Set_Info(INFO _tInfo) { m_tInfo = _tInfo; }
 	void Set_Dir(D3DXVECTOR3 _vDir) { m_tInfo.vDir = _vDir; }
 	void Set_Pos(float _x, float _y) { m_tInfo.vPos.x = _x; m_tInfo.vPos.y = _y; }
+	RECT Get_Rect() { return m_tRect; };
 public :
 	INFO Get_Info() { return m_tInfo; }
 	virtual void Update_Rect();
+
+public:
+	void Set_Hp();
+	int Get_Hp();
+
 public:
 	const RENDERID::ID& Get_RenderID() const { return m_eRenderID; }
 protected:
@@ -30,6 +36,8 @@ protected:
 	bool	m_bDead;
 	float	m_fSpeed;
 	float	m_fAngle;
+
+	int		m_iHp;
 
 	RENDERID::ID	m_eRenderID;
 

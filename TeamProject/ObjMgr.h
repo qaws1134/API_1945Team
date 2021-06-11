@@ -15,9 +15,10 @@ public:
 	void Render(HDC _DC);
 	void Release();
 	void Add_Object(CObj* _pObj, OBJID::ID _eID) { m_listObj[_eID].emplace_back(_pObj); }
-
 public:
 	CObj* CObjMgr::Get_ShortTarget(INFO _INFO, OBJID::ID _eID);
+public:
+	void Collision_Update();
 public:
 	CObj* Get_Player() { if (m_listObj[OBJID::PLAYER].empty())return nullptr; return m_listObj[OBJID::PLAYER].front(); }
 public:

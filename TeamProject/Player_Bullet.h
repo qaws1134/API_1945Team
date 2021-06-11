@@ -16,6 +16,7 @@ public:
 	virtual void Render(HDC _DC) = 0;
 	virtual void Release() = 0;
 
+public:
 
 };
 

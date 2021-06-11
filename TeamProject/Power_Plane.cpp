@@ -14,6 +14,9 @@ CPower_Plane::~CPower_Plane()
 
 void CPower_Plane::Initialize()
 {
+	m_iHp = 5;
+	//추가한 코드(위)
+
 	m_eRenderID = RENDERID::OBJECT;
 	D3DXMatrixIdentity(&matWorld);
 

@@ -2,7 +2,7 @@
 #include "Logo.h"
 #include "MyButton.h"
 #include "ObjMgr.h"
-
+#include "MyUI.h"
 CLogo::CLogo():dwDelay(0), dwTime(GetTickCount()), m_bColor(false), m_fAngle(0.f), m_bDir(false), m_fSpeed(0.f)
 {
 	ZeroMemory(m_pAirPlane, sizeof(m_pAirPlane));
@@ -20,16 +20,14 @@ void CLogo::Initialize()
 {
 	Load_Rocket();
 	CObj* pObj = new CMyButton;
-	pObj->Set_Pos(300.f, 600.f);
+	pObj->Set_Pos(500.f, 600.f);
 	pObj->Initialize();
-
 	CObjMgr::Get_Instance()->Add_Object(pObj, OBJID::UI);
-
-	m_tInfo.vPos.x = 50.f;
+	CObjMgr::Get_Instance()->Add_Object(CAbstractFactory<CMyUI>::Create(), OBJID::STATE);
+	m_tInfo.vPos.x = 250.f;
 	m_tInfo.vPos.y = 600.f;
 
-	//m_tInfo.vDir = {1.0f, -1.0f, 0.0f};
-	//D3DXVec3Normalize(&m_tInfo.vDir, &m_tInfo.vDir);
+
 	dwDelay = 200;
 
 	m_fAngle = 45.f;
@@ -55,6 +53,7 @@ void CLogo::Render(HDC _DC)
 
 void CLogo::Release()
 {
+
 	CObjMgr::Get_Instance()->Delete_ObjID(OBJID::UI);
 }
 
@@ -71,15 +70,13 @@ void CLogo::Create_Letter(HDC _DC, const TCHAR * _pFont, const TCHAR * _pLetter,
 
 void CLogo::Draw_Paint(HDC _DC)
 {
-	// ÀüÃ¼ ±Û¾¾»ö °ËÁ¤À¸·Î
-	SetTextColor(_DC, RGB(0, 0, 0));
 	//±Û¾¾
-	Create_Letter(_DC, L"ÇÑÄÄ À±Ã¼ B", L"STRIKERS", 100, 145, 130);
-	Create_Letter(_DC, L"±Ã¼­", L"1945", 120, 250, 150);
+	Create_Letter(_DC, L"HY°ß°íµñ", L"STRIKERS", 360, 200, 55);
+	Create_Letter(_DC, L"HY°ß°íµñ", L"1945", 320, 250, 150);
 
 	// ¼±
-	MoveToEx(_DC, 55, 250, nullptr);
-	LineTo(_DC, 545, 250);
+	MoveToEx(_DC, 255, 250, nullptr);
+	LineTo(_DC, 745, 250);
 
 	// insert Button
 	CObjMgr::Get_Instance()->Render(_DC);
@@ -91,10 +88,7 @@ void CLogo::Draw_Paint(HDC _DC)
 		dwTime = GetTickCount();
 	}
 	if (m_bColor)
-		SetTextColor(_DC, RGB(255, 0, 0));
-	else
-		SetTextColor(_DC, RGB(0, 0, 0));
-	TextOut(_DC, 257.f, 590.f, L"[ Insert Coin ]", 15.f);
+		TextOut(_DC, 457, 590, L"[ Insert Coin ]", 15);
 
 	Draw_Rocket(_DC);
 }

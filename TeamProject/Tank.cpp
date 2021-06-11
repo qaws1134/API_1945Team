@@ -15,6 +15,9 @@ CTank::~CTank()
 
 void CTank::Initialize()
 {
+	m_iHp = 10;
+	//추가한 코드(위)
+
 	m_eRenderID = RENDERID::OBJECT;
 	D3DXMatrixIdentity(&matWorld);
 

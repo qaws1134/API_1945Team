@@ -90,7 +90,7 @@ void CSuperFly::Release()
 
 void CSuperFly::Basic_Attack()
 {
-	for (int i = -100.f; i <= 140; i += 55)
+	for (int i = -100; i <= 140; i += 55)
 	{
 		CObjMgr::Get_Instance()->Add_Object(Create_SuperFlyBullet<Basic_Bullet>(m_tInfo.vPos.x + i, m_tInfo.vPos.y - m_tInfo.vSize.y * 0.7f, 0.0f, 5, 60, Basic_Bullet::BULLET_STATE::BASIC), OBJID::BULLET);
 		CObjMgr::Get_Instance()->Add_Object(Create_SuperFlyBullet<Basic_Bullet>(m_tInfo.vPos.x + i - 20.f, m_tInfo.vPos.y - m_tInfo.vSize.y * 0.7f, 145.0f, 5, 60, Basic_Bullet::BULLET_STATE::BASIC), OBJID::BULLET);
@@ -99,15 +99,15 @@ void CSuperFly::Basic_Attack()
 
 void CSuperFly::Target_Attack()
 {
-	for(int i = -120.f; i <= 120.f; i += 60.f)
+	for(int i = -120; i <= 120; i += 60)
 		CObjMgr::Get_Instance()->Add_Object(Create_SuperFlyBullet<Super_Bullet>(m_tInfo.vPos.x + i, m_tInfo.vPos.y - m_tInfo.vSize.y * 0.7f + 10.f, 0.0f, 5.f, 5.f, Basic_Bullet::BULLET_STATE::TARGET), OBJID::BULLET);
 
 }
 
 void CSuperFly::Correct_Rect()
 {
-	m_tRect.left -= m_tInfo.vSize.x * 2.3f;
-	m_tRect.right += m_tInfo.vSize.x * 2.3f;
+	m_tRect.left -= (LONG)(m_tInfo.vSize.x * 2.3f);
+	m_tRect.right += (LONG)(m_tInfo.vSize.x * 2.3f);
 
-	m_tRect.bottom += m_tInfo.vSize.y * 0.4f;
+	m_tRect.bottom += (LONG)(m_tInfo.vSize.y * 0.4f);
 }

@@ -21,7 +21,8 @@ void CMonster_Bullet::Initialize()
 
 int CMonster_Bullet::Update()
 {
-
+	//////////////////////////////꼭 수정할 것
+	m_bDead = true;
 	if (m_bDead)
 		return OBJ_DEAD;
 

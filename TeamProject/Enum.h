@@ -9,7 +9,7 @@ namespace RENDERID
 
 namespace OBJID
 {
-	enum ID { PLAYER, MONSTER, BULLET, MOUSE, SHIELD, UI, END };
+	enum ID { PLAYER, MONSTER, BULLET, M_BULLET, STATE, SHIELD, UI, EFFECT, END };
 }
 
 #endif

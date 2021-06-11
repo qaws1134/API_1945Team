@@ -3,7 +3,8 @@
 #define Charge_Bullet_LaunchN 4
 #define Max_Player_Angle 60
 #define Min_Player_Angle -60
-#define Charge_Gauge_Max 200
+#define Charge_Gauge_Max 500
+#define	Bomb_Gauge_Max 2000
 #include "Obj.h"
 #include "Basic_Bullet.h"
 #include "Bullet.h"
@@ -27,6 +28,19 @@ public:
 	void Add_Level();
 	void Add_Bomb();
 
+public:
+	int Get_BombN();
+	int Get_SuperShot_Gauge();
+	int Get_Score();
+	int Get_Super_Shot();
+	int Get_Charge_Shot();
+	int Get_Charge_Shot_Gauge();
+public:
+	void Super_Shot_Check();
+public:
+	void Set_BombN(int n);
+	void Set_SuperShot_Gauge(int n);
+	void Set_Score(int n);
 private:
 	void Key_Check();
 	void State_Change();
@@ -41,6 +55,19 @@ private:
 private:
 	void Charge_Shot();
 	void Bomb();
+
+public:
+	void Replay();
+	void Check_Hp();
+public:
+	void Draw_Rect(HDC _DC);
+public:
+	void Dead_Player();
+public:
+	void Set_Player();
+
+public:
+	bool Get_DeadMove();
 private:
 	template <typename T>
 	CObj* Create_PlayerBullet(float _x, float _y, float _Angle,  float _xSize, float _ySize, Basic_Bullet::BULLET_STATE _STATE)
@@ -67,15 +94,42 @@ private:
 	bool			m_bBullet_Launch;
 	int				m_Bullet_LaunchN;
 
-	bool			m_bCharge_Shot;
+
+
+	//Bomb
+	CObj*			m_Bomb;
+	int				m_iBombN;
 	bool			m_bCharge_Bomb;
 
-	CObj*			m_Charge_Shot;
-	CObj*			m_Bomb;
-
-	int				m_iBombN;
+	//Charge_Shot
+	CObj*			m_pCharge_Shot;
 	int				m_Charge_Gauge;
+	int				m_iChargeShot;
+	bool			m_bChargeShot;
 
-	bool			m_bFullGauge;
+
+	int				m_iScore;
+
+	//Super_Shot
+	int				m_iSuperShot;
+	int				m_iSuperShot_Gauge;
+
+	//플레이어 모습
+	D3DXVECTOR3 m_pPlayer[30];
+	D3DXVECTOR3 m_pDraw_Player[30];
+	
+	RECT			Dead_Effect[5];
+	int				Dead_EffectSize[5];
+	bool			m_bDead_Effect_Sequence;
+	bool			m_bDead_Effect_Move;
+	bool			m_bDeadMove;
+	int				Dead_Montion_Num;
+
+	bool			m_bKeyRock;
+
+	bool			m_bBlink;
+
+	int				m_iTime;
+	int				m_iDelay;
 };
 

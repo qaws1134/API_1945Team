@@ -149,9 +149,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BackGround.h" />
     <ClInclude Include="Basic_Bullet.h" />
+    <ClInclude Include="Effect.h" />
     <ClInclude Include="Logo.h" />
     <ClInclude Include="MyButton.h" />
+    <ClInclude Include="MyUI.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Player_Bullet.h" />
     <ClInclude Include="SuperFly.h" />
@@ -189,9 +192,12 @@
     <ClInclude Include="TeamProject.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BackGround.cpp" />
     <ClCompile Include="Basic_Bullet.cpp" />
+    <ClCompile Include="Effect.cpp" />
     <ClCompile Include="Logo.cpp" />
     <ClCompile Include="MyButton.cpp" />
+    <ClCompile Include="MyUI.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.cpp" />
     <ClCompile Include="SuperFly.cpp" />

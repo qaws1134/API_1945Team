@@ -106,6 +106,15 @@
     <Filter Include="소스 파일\01.Obj\02.Bullet\00.Player_Bullet\01.Super_Bullet">
       <UniqueIdentifier>{349fe74a-3d44-4439-8881-b04a5e57c780}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\01.Obj\06.UI">
+      <UniqueIdentifier>{1fb77f98-70d6-4d19-8682-dc1788f81bbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\07.BackGround">
+      <UniqueIdentifier>{8921c4e3-db14-4abb-aff4-adee0fa71d43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Obj\08.Effect">
+      <UniqueIdentifier>{8942730d-c742-435d-af01-e0eb18f0419c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -222,6 +231,15 @@
     <ClInclude Include="Player_Bullet.h">
       <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
     </ClInclude>
+    <ClInclude Include="MyUI.h">
+      <Filter>소스 파일\01.Obj\06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGround.h">
+      <Filter>소스 파일\01.Obj\07.BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>소스 파일\01.Obj\08.Effect</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TeamProject.cpp">
@@ -238,9 +256,6 @@
     </ClCompile>
     <ClCompile Include="SceneMgr.cpp">
       <Filter>소스 파일\98.Manager\03.SceneMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="Obj.cpp">
-      <Filter>소스 파일\01.Obj</Filter>
     </ClCompile>
     <ClCompile Include="ObjMgr.cpp">
       <Filter>소스 파일\98.Manager\01.ObjMgr</Filter>
@@ -307,6 +322,18 @@
     </ClCompile>
     <ClCompile Include="..\..\TeamProject (2)\TeamProject\Player_Bullet.cpp">
       <Filter>소스 파일\01.Obj\02.Bullet\00.Player_Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="MyUI.cpp">
+      <Filter>소스 파일\01.Obj\06.UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj.cpp">
+      <Filter>소스 파일\01.Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGround.cpp">
+      <Filter>소스 파일\01.Obj\07.BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>소스 파일\01.Obj\08.Effect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

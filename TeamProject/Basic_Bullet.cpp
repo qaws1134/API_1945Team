@@ -18,15 +18,14 @@ void Basic_Bullet::Initialize()
 		m_vP[2] = { m_tInfo.vSize.x  * 0.2f, m_tInfo.vSize.y * 0.5f , 0.f };
 		m_vP[3] = { -m_tInfo.vSize.x * 0.2f, m_tInfo.vSize.y * 0.5f , 0.f };
 	
-	
 		m_tInfo.vDir = { -1.0f, 1.0f, 0.f };
 		m_eRenderID = RENDERID::OBJECT;
 		D3DXMatrixIdentity(&matWorld);
 	
 		m_fSpeed = 25.f;
 		m_Still = 80;
-
-	
+		m_tInfo.vPos.x -= 8;
+		m_tInfo.vPos.y -= 30;
 }
 
 int Basic_Bullet::Update()

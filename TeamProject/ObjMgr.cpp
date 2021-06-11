@@ -1,7 +1,9 @@
 #include "stdafx.h"
+#include "CollisionMgr.h"
 #include "ObjMgr.h"
 #include "Obj.h"
-
+#include "Player.h"
+#include "Effect.h"
 CObjMgr* CObjMgr::m_pInstance = nullptr;
 CObjMgr::CObjMgr()
 {
@@ -97,6 +99,18 @@ CObj * CObjMgr::Get_ShortTarget(INFO _INFO, OBJID::ID _eID)
 	}
 
 	return pTarget;
+}
+
+void CObjMgr::Collision_Update()
+{
+	if (!((CPlayer*)(Get_Player()))->Get_DeadMove() && CCollisionMgr::Collision_Rect(m_listObj[OBJID::PLAYER], m_listObj[OBJID::M_BULLET], false)) {}
+
+	if (CCollisionMgr::Collision_Rect(m_listObj[OBJID::MONSTER], m_listObj[OBJID::BULLET],true) )// 몬스터와 플레이어 불렛 충돌
+	{
+		((CPlayer*)(Get_Player()))->Set_SuperShot_Gauge(50);
+		((CPlayer*)(Get_Player()))->Set_Score(rand() % 1000);
+	}
+
 }
 
 void CObjMgr::Delete_ObjID(OBJID::ID _eID)
